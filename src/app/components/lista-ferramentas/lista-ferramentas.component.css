@@ -1,0 +1,9 @@
+.tool-list{
+display: grid;
+justify-content: center;
+align-items: center;
+}
+
+tr [mat-cell] {
+  background-color: #7b1ca3;
+}

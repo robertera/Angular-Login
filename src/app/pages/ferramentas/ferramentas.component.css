@@ -1,0 +1,16 @@
+.spacer{
+  flex: 1 1 auto;
+}
+
+span{
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+h2{
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}

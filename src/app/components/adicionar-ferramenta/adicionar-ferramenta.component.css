@@ -1,0 +1,47 @@
+.form-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2{
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: white;
+}
+
+input{
+  /*TODO*/
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #7b1ca3;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+button {
+  margin-top: 10px;
+  width: 100%;
+}
+
+
+button[color="accent"] {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+button[color="accent"]:hover {
+  background-color: #b71c1c; /* Cor de fundo ao passar o mouse */
+}
