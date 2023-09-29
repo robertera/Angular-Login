@@ -1,30 +1,54 @@
 .tool-list{
-display: grid;
-justify-content: center;
-align-items: center;
+  display: grid;
+  justify-content:center;
+  align-items: center;
+  max-height: 500px;
+  max-width: 600px;
+  overflow-y: auto;
 }
 
-table{
-  border: 2px solid #243b55;
-  border-radius: 5px;
+.table-container{
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
 }
 
-th, td, tr {
+
+tr {
+  background-color: #527297;
+}
+
+th{
+  background: none;
+  color: white;
+  text-align: center;
+}
+
+td{
 padding: 1rem;
-color: black;
-background-color: whitesmoke;
+color: white;
+background-color: #7d9cc0;
 text-align: center;
+font-size: 15px;
 }
 
 mat-paginator{
+  display: flex;
+  justify-content: center;
   background: none;
 }
 
-button.mat-icon-button {
+.list-box{
+  background: none;
+}
+
+button .mat-icon-button {
   font-size: 24px;
   margin: 0 4px;
 }
 
 .edit-button{
-  color: #243b55;
+  color: #ffffff;
+}
+
+.odd-cell{
+  background-color: #527297;
 }

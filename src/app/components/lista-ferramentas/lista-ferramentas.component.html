@@ -1,26 +1,29 @@
 <div class="tool-list">
+  <a id="table-anchor"></a>
+  <div class="table-container">
   <table mat-table [dataSource]="dataSource">
     <!-- Coluna de ID -->
     <ng-container matColumnDef="id" class="id">
       <th mat-header-cell *matHeaderCellDef>ID</th>
-      <td mat-cell *matCellDef="let ferramenta">{{ ferramenta.id }}</td>
+      <td mat-cell *matCellDef="let ferramenta; let i = index" [class.odd-cell]="i % 2 !== 0">{{ ferramenta.id }}</td>
     </ng-container>
 
     <!-- Coluna de Nome -->
     <ng-container matColumnDef="nome">
       <th mat-header-cell *matHeaderCellDef>Nome</th>
-      <td mat-cell *matCellDef="let ferramenta">{{ ferramenta.nome }}</td>
+      <td mat-cell *matCellDef="let ferramenta; let i = index" [class.odd-cell]="i % 2 !== 0">{{ ferramenta.nome }}</td>
     </ng-container>
 
     <!-- Coluna de Descrição -->
     <ng-container matColumnDef="descricao">
       <th mat-header-cell *matHeaderCellDef>Descrição</th>
-      <td mat-cell *matCellDef="let ferramenta">{{ ferramenta.descricao }}</td>
+      <td mat-cell *matCellDef="let ferramenta; let i = index" [class.odd-cell]="i % 2 !== 0">{{ ferramenta.descricao }}</td>
     </ng-container>
 
+    <!-- Coluna de Ações -->
     <ng-container matColumnDef="acoes">
       <th mat-header-cell *matHeaderCellDef>Ações</th>
-      <td mat-cell *matCellDef="let ferramenta">
+      <td mat-cell *matCellDef="let ferramenta; let i = index" [class.odd-cell]="i % 2 !== 0">
         <button class="edit-button" mat-icon-button (click)="editarFerramenta(ferramenta)">
           <mat-icon>edit</mat-icon>
         </button>
@@ -29,16 +32,15 @@
         </button>
       </td>
     </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="['id', 'nome', 'descricao', 'acoes']"></tr>
-    <tr mat-row *matRowDef="let row; columns: ['id', 'nome', 'descricao','acoes']"></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+</div>
+</div>
 
   <!-- Paginação -->
   <mat-paginator
-    class="custom-paginator"
     [pageSizeOptions]="[5, 10, 20]"
     aria-label="Select page of tools"
   >
   </mat-paginator>
-</div>

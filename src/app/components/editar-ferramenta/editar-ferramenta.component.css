@@ -58,3 +58,7 @@ h2{
   justify-content: space-between;
   margin-top: 20px;
  }
+
+ .no-sticky {
+  position: static !important;
+}

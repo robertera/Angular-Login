@@ -1,5 +1,5 @@
 <mat-card>
-      <h2>Login</h2>
+      <h1>Login</h1>
     <mat-card-content>
       <form (ngSubmit)="login()">
         <div class="user-box">
@@ -7,7 +7,7 @@
           <label>Usuário</label>
         </div>
         <div class="user-box">
-          <input matInput type="" placeholder=" " [(ngModel)]="senha" name="senha" required>
+          <input matInput type="password" placeholder=" " [(ngModel)]="senha" name="senha" required>
           <label>Senha</label>
         </div>
 

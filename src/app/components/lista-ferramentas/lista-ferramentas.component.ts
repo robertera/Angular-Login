@@ -1,14 +1,18 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { DADOS_FERRAMENTAS } from 'src/assets/dados-ferramentas';
-import {MatPaginator} from '@angular/material/paginator';
+import {MatPaginator, MatPaginatorIntl} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import { EditarFerramentaComponent } from '../editar-ferramenta/editar-ferramenta.component';
 import { MatDialog } from '@angular/material/dialog';
+import { MatPaginatorIntlPtBr } from '../../../assets/MatPaginatorIntlPtBr';
 
 @Component({
   selector: 'app-lista-ferramentas',
   templateUrl: './lista-ferramentas.component.html',
   styleUrls: ['./lista-ferramentas.component.css'],
+  providers: [
+    {provide: MatPaginatorIntl, useClass: MatPaginatorIntlPtBr}
+  ]
 })
 
 export class ListaFerramentasComponent implements AfterViewInit  {

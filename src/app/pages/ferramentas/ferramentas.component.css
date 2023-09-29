@@ -18,3 +18,9 @@ h2{
 mat-toolbar{
   background-color: #243b55;
 }
+
+app-lista-ferramentas{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
