@@ -1,13 +1,15 @@
 <div class="form-container">
-  <h2>Wath Tool you will add?</h2>
+  <h2>Qual ferramenta você vai adicionar?</h2>
 <form (ngSubmit)="adicionarFerramenta()">
-  <mat-form-field>
+  <div class="tool-box">
     <input matInput placeholder="Nome da Ferramenta" [(ngModel)]="novaFerramenta.nome" name="nome" required>
-  </mat-form-field>
-  <mat-form-field>
+  </div>
+  <div class="tool-box">
     <input matInput placeholder="Descrição da Ferramenta" [(ngModel)]="novaFerramenta.descricao" name="descricao" required>
-  </mat-form-field>
-  <button mat-raised-button color="primary" type="submit">Adicionar Ferramenta</button>
+  </div>
+  <div class="button-container">
+    <button mat-raised-button color="primary" type="submit"><mat-icon>library_add</mat-icon>Adicionar</button>
+    <button mat-raised-button color="accent" (click)="voltarParaLista()"><mat-icon>keyboard_return</mat-icon>Voltar</button>
+    </div>
 </form>
-<button mat-raised-button color="accent" (click)="voltarParaLista()"><mat-icon>keyboard_return</mat-icon>Voltar para a Lista</button>
 </div>

@@ -14,3 +14,7 @@ h2{
   font-size: 2rem;
   font-weight: bold;
 }
+
+mat-toolbar{
+  background-color: #243b55;
+}

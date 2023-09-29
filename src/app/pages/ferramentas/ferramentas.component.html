@@ -1,8 +1,9 @@
 <p>
-  <mat-toolbar color="primary">
+  <mat-toolbar>
   <span>ToolBox</span>
   <span class="spacer"></span>
-  <button mat-raised-button [routerLink]="['/adicionar-ferramenta']"><mat-icon>library_add</mat-icon>Add New Tool to Box</button>
+  <button mat-button [routerLink]="['/adicionar-ferramenta']"><mat-icon>library_add</mat-icon>Add New Tool to Box</button>
+  <button mat-button (click)="logout()"><mat-icon>exit_to_app</mat-icon>Logout</button>
 </mat-toolbar>
 </p>
 

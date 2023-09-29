@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService} from '../../services/auth.service'
 
 @Component({
   selector: 'app-ferramentas',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./ferramentas.component.css']
 })
 export class FerramentasComponent {
+  constructor(private authService: AuthService) { }
 
+  logout(): void {
+    this.authService.logout();
+  }
 }

@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule} from '@angular/material/input';
 import { MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
@@ -14,10 +15,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatCardModule} from '@angular/material/card';
 import { LoginComponent } from './pages/login/login.component';
 import { ListaFerramentasComponent } from './components/lista-ferramentas/lista-ferramentas.component';
 import { FerramentasComponent } from './pages/ferramentas/ferramentas.component';
 import { AdicionarFerramentaComponent } from './components/adicionar-ferramenta/adicionar-ferramenta.component';
+import { EditarFerramentaComponent } from './components/editar-ferramenta/editar-ferramenta.component';
 
 
 @NgModule({
@@ -26,12 +30,14 @@ import { AdicionarFerramentaComponent } from './components/adicionar-ferramenta/
     LoginComponent,
     ListaFerramentasComponent,
     FerramentasComponent,
-    AdicionarFerramentaComponent
+    AdicionarFerramentaComponent,
+    EditarFerramentaComponent,
   ],
   imports: [
     RouterModule,
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
     MatInputModule,
@@ -40,7 +46,9 @@ import { AdicionarFerramentaComponent } from './components/adicionar-ferramenta/
     MatFormFieldModule,
     MatPaginatorModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDialogModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

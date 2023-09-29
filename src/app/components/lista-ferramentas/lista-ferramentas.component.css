@@ -4,6 +4,27 @@ justify-content: center;
 align-items: center;
 }
 
-tr [mat-cell] {
-  background-color: #7b1ca3;
+table{
+  border: 2px solid #243b55;
+  border-radius: 5px;
+}
+
+th, td, tr {
+padding: 1rem;
+color: black;
+background-color: whitesmoke;
+text-align: center;
+}
+
+mat-paginator{
+  background: none;
+}
+
+button.mat-icon-button {
+  font-size: 24px;
+  margin: 0 4px;
+}
+
+.edit-button{
+  color: #243b55;
 }

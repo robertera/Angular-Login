@@ -16,8 +16,13 @@ export class AdicionarFerramentaComponent {
   constructor(private router: Router) {}
 
   adicionarFerramenta() {
+    if (!this.novaFerramenta.nome || !this.novaFerramenta.descricao) {
+      alert('Por favor, preencha todos os campos antes de adicionar uma nova ferramenta!');
+      return;
+    }
+
     const novaFerramenta = {
-      id: this.gerarNovoId(), // Gere um novo ID
+      id: this.gerarNovoId(),
       nome: this.novaFerramenta.nome,
       descricao: this.novaFerramenta.descricao
     };
